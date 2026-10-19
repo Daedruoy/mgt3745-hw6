@@ -6,19 +6,19 @@ Committed before either builder was opened. Do not edit these predictions after 
 
 ### Tight (a count)
 
-<Example form: "bolt.new will satisfy N of my M EARS rows; AI Studio will satisfy N of M.">
+bolt.new will satisfy 5 of my 5 EARS rows; AI Studio will satisfy 5 of 5. A row counts as satisfied if it passes when I test it in the running build or in the shared test.
 
 **Resolution (YYYY-MM-DD):** <the actual counts>
 
 ### Loose (a direction with a reason)
 
-<Your prediction and the reason for it.>
+AI Studio will create or change more files that the feature did not need than bolt.new will, because it rewrites whole projects and adds files.
 
 **Resolution (YYYY-MM-DD):** <what happened>
 
 ### Open (a question the builds can answer)
 
-<Your question.>
+Will either builder invent posting data for the ranking, and if so, will it label that data as sample data or present it as real postings?
 
 **Resolution (YYYY-MM-DD):** <the answer, with evidence>
 
