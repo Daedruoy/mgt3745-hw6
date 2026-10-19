@@ -1,15 +1,17 @@
 # HW6: Two Builders, One Specification
 
-> Replace every line in angle brackets. A README that still carries template placeholders loses points.
-
 ## Feature
 
-**Team repository:** <URL of your team repository>
-**Spec provenance:** copied from commit `<full commit hash>` on <YYYY-MM-DD>
+**Team repository:** https://github.com/aaronsarasota04/mgt3745-team-gamma
+**Spec provenance:** copied from commit `5abbc1c5509800ce9898e9935eafdf94cf694cc0` on 2026-10-19
 
-**Feature:** <ID and name from your team's FEATURES.md>
+**Feature:** F2. Ranked Gaps
 
-<Paste the feature's EARS rows here, unchanged. At least three rows, including at least one IF row.>
+- F2-1. THE SYSTEM SHALL order the missing skills by the number of postings for the role that list each one, highest first.
+- F2-2. THE SYSTEM SHALL show the posting count beside each skill and the total postings for the role.
+- F2-3. WHEN results are shown, THE SYSTEM SHALL mark the top-ranked missing skill as the first gap to close.
+- F2-4. IF two skills have the same count, THEN THE SYSTEM SHALL order them alphabetically, so the order does not change between page loads.
+- F2-5. IF the role has fewer than 10 postings, THEN THE SYSTEM SHALL say the sample is small next to the ranking.
 
 ## See It Work
 
