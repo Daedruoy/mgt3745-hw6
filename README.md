@@ -2,6 +2,8 @@
 
 ## Feature
 
+**Exception:** `context/STYLE.md` and `context/SKILLS.md` are from my HW5 because the team's Phase 2 versions are not merged.
+
 **Team repository:** https://github.com/aaronsarasota04/mgt3745-team-gamma
 **Spec provenance:** copied from commit `5abbc1c5509800ce9898e9935eafdf94cf694cc0` on 2026-10-19
 
