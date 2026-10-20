@@ -4,10 +4,10 @@
 
 | EARS row | bolt.new | Evidence | AI Studio | Evidence |
 |---|---|---|---|---|
-| F2-1 | Pass | `App.tsx` lines 152 to 156 sort by count, highest first; Backend counts fall from 11 to 3 (bolt.gif) | Pass | `gapRanking.ts` sorts by `postingCount`, highest first; Frontend shows 27, 20, 18, 15 (aistudio.gif) |
+| F2-1 | Pass | `App.tsx` lines 152 to 156 sort by count, highest first; Backend counts fall from 11 to 3 (bolt.gif); shared.test.js passes | Pass | `gapRanking.ts` sorts by `postingCount`, highest first; Frontend shows 27, 20, 18, 15 (aistudio.gif); shared.test.js passes |
 | F2-2 | Pass | Each row shows "N of 11 postings" and the header shows the total (bolt.gif) | Partial | Right on default roles, but the "6 (Small Sample)" toggle showed "27 of 6 postings (450%)" (aistudio.gif) |
 | F2-3 | Pass | A "First gap to close" panel names Agile (bolt.gif) | Pass | `gapRanking.ts` sets `isFirstGap` on `missing[0]`; badge on TypeScript (aistudio.gif) |
-| F2-4 | Pass | `App.tsx` lines 152 to 156 break ties with `localeCompare`; seven skills tied at 11 in A to Z order (bolt.gif) | Pass | `gapRanking.ts` breaks ties with `localeCompare`; GraphQL before Jest at 15 (aistudio.gif) |
+| F2-4 | Pass | `App.tsx` lines 152 to 156 break ties with `localeCompare`; seven skills tied at 11 in A to Z order (bolt.gif); shared.test.js passes | Pass | `gapRanking.ts` breaks ties with `localeCompare`; GraphQL before Jest at 15 (aistudio.gif); shared.test.js passes |
 | F2-5 | Pass (code only) | `App.tsx` line 27 sets the threshold at 10, lines 160 and 161 compare it, lines 423 to 429 render "Small sample"; not seen on screen | Pass | The 6-posting Embedded Firmware role shows "The sample is small (6 postings)" (aistudio.gif) |
 
 ## Scope Creep
@@ -38,6 +38,8 @@ Agreement rate with the second grader: <N of M items, %>. Details in [JUDGMENT.m
 **4. Both builders added more than F2.** AI Studio added an apply recommendation, which the team spec forbids in F3-2 and X4. My prompt carried Devon's job statement but not those rows, so the gap is in my prompt as much as in the builder. bolt added a Supabase backend. The template file `.bolt/prompt` asks for "fully featured" pages worthy of production.
 
 **5. Rows with a stated rule came through in both builds.** F2-1, F2-3, and F2-4 passed in both, and both break ties with `localeCompare`.
+
+The shared test covers F2-1 and F2-4 only, and both builds pass all six checks, so it does not separate them. It runs the sorting logic copied from each build, not the rendered page, so it cannot see the F2-2 count bug in AI Studio. The adapters and the test were drafted with Claude (DDR-003).
 
 ## Spec Gaps
 
