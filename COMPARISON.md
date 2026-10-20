@@ -61,10 +61,15 @@ The shared test covers F2-1 and F2-4 only, and both builds pass all six checks, 
 
 ### Scores (commit after the weights)
 
-| Criterion | Weight | bolt.new | AI Studio |
-|---|---|---|---|
-| <criterion> | <weight> | <1 to 5> | <1 to 5> |
-| **Weighted total** | | <total> | <total> |
+| Criterion | Weight (1 to 5) | Why |
+|---|---|---|
+| Passes the F2 rows as written | 5 | The rows are the spec, so a builder that misses them costs us review time in Phase 2. |
+| Fits the ADR-001 stack | 4 | ADR-001 puts data in a Worker and D1, and X5 and X6 exclude a hosted backend and a framework. |
+| Stays inside the feature | 3 | Extra features need review and may break exclusions, but they can be deleted. |
+| Reports its data and its own results honestly | 4 | The product's whole point is showing evidence a student can trust, and a builder that overstates its work hides defects from reviewers. |
+| A teammate can review it in one sitting | 4 | Every change needs a reviewer other than its author, and review time is short. |
+| Avoids live services and credentials | 4 | The repo is public, and TOOLS.md needs a row and a crossing statement for every service. |
+
 
 ### Decision
 
