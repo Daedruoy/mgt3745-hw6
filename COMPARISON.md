@@ -25,7 +25,7 @@ Extras inside needed files do not show in a file count. bolt put its skill chips
 
 ## Judgment Eval
 
-Agreement rate with the second grader: <N of M items, %>. Details in [JUDGMENT.md](JUDGMENT.md).
+Agreement rate with the second grader: 9 of 10 (90%). Details in [JUDGMENT.md](JUDGMENT.md).
 
 ## Findings
 

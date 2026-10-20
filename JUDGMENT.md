@@ -15,8 +15,7 @@ Ten yes or no questions about what each build shows. They cover honesty about it
 
 prompts/PROMPT.md, docs/img/bolt.gif, docs/img/aistudio.gif, docs/img/bolt-small-sample.png, builds/bolt.zip, and builds/aistudio.zip. No summary of my findings. Both graders saw the same recordings, so their agreement shows the questions are clear, not that the evidence is independent.
 
-**Second grader:** Roomate, who is currently recruiting for SWE internships.
-
+**Second grader:** A roommate who is recruiting for software engineering internships. They are not on my team, and they received the files listed above.
 ## Results
 
 | Item | Question (Yes / No) | You | Second grader |
@@ -32,9 +31,9 @@ prompts/PROMPT.md, docs/img/bolt.gif, docs/img/aistudio.gif, docs/img/bolt-small
 | J9 | bolt.new: are skills marked as held on first load that the user did not enter? | No|No |
 | J10 | AI Studio: are skills marked as held on first load that the user did not enter? |No | No|
 
-**Agreement rate:** (fill in as N of 10 after both columns are done)
+**Agreement rate:** 9 of 10
 9 of 10
 
 ## Disagreements
 
-We argued on J1 on whether or not bolt signaled that the job postings were sample or not. Personally, I saw the statement regarding to skills coming from stored postings and as someone who made the prompt I knew that there was no job postings specifically added and therefore the date was made-up. However, my roomate had no clue and assumed it was coming from real data.
+J1 (bolt.new). I answered No and the second grader answered Yes. The page calls its postings "job postings we have on file" and never says they are sample or made-up data. I knew they were made up only because I wrote the prompt and supplied none. When we talked afterward, the second grader said they had assumed the postings came from real data, which does not match their Yes. The question asks the viewer to find a label that is not there, and a viewer without the prompt's context cannot tell.

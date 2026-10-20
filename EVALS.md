@@ -34,5 +34,6 @@ Will either builder invent posting data for the ranking, and if so, will it labe
 | Told the student whether to apply | AI Studio | 1 | none (F3-2 and X4 exclude it) | "Viable Candidate", a 55% fit score, "Submit application now", and "unlocks qualification for up to 84%" (aistudio.gif) |
 | Added a hosted backend the spec excludes | bolt.new | 1 | none (X5 excludes it) | `@supabase/supabase-js` in `package.json`, `src/lib/supabase.ts`, a `supabase/migrations` file, and `project/.env` |
 | Declared dependencies nothing uses | AI Studio | 1 | none | `@google/genai`, `express`, and `dotenv` in `package.json`; no import in `src` and no server file in the zip |
+| Gold used for text that is not a button, heading, or divider | bolt.new | 1 | none (STYLE.md rule) | J7 in JUDGMENT.md; bolt.gif |
 
 Frequency counts the builds, out of two, where the failure appeared. Ties are ordered by how much they undermine the EARS rows.
