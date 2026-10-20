@@ -77,4 +77,4 @@ The shared test covers F2-1 and F2-4 only, and both builds pass all six checks, 
 
 ## Handoff to the Team
 
-Pull request or issue proposing a FEATURES.md change: <URL>
+Pull request or issue proposing a FEATURES.md change: https://github.com/aaronsarasota04/mgt3745-team-gamma/issues/15
