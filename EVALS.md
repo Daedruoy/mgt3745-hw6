@@ -8,19 +8,19 @@ Committed before either builder was opened. Do not edit these predictions after 
 
 bolt.new will satisfy 5 of my 5 EARS rows; AI Studio will satisfy 5 of 5. A row counts as satisfied if it passes when I test it in the running build or in the shared test.
 
-**Resolution (YYYY-MM-DD):** <the actual counts>
+**Resolution (2026-10-20):** bolt.new satisfied 5 of 5 rows. AI Studio satisfied 4 of 5, because F2-2 was Partial: after clicking "6 (Small Sample)" the Frontend role showed "27 of 6 postings (450%)" (aistudio.gif). My prediction held for bolt.new and was wrong for AI Studio. bolt.new's F2-5 passed on screen for Data Analyst (bolt-small-sample.png).
 
 ### Loose (a direction with a reason)
 
 AI Studio will create or change more files that the feature did not need than bolt.new will, because it rewrites whole projects and adds files.
 
-**Resolution (YYYY-MM-DD):** <what happened>
+**Resolution (2026-10-20):** True on the count. AI Studio had 6 files the feature did not need and bolt.new had 3, counting platform and template files, or 3 and 1 without them. The reason I gave could not be tested, because both builders started from nothing and neither rewrote an existing project. bolt.new put its extras inside App.tsx, so a file count undercounts it.
 
 ### Open (a question the builds can answer)
 
 Will either builder invent posting data for the ranking, and if so, will it label that data as sample data or present it as real postings?
 
-**Resolution (YYYY-MM-DD):** <the answer, with evidence>
+**Resolution (2026-10-20):** Both invented the posting data, and neither labeled it as sample data. bolt.new reads its postings from a Supabase database it created and calls them "job postings we have on file". AI Studio takes its counts and company names from src/data/rolesData.ts, and shows named companies under "real requirements from tech employers".
 
 ## Error Log
 
