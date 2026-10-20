@@ -57,12 +57,6 @@ The shared test covers F2-1 and F2-4 only, and both builds pass all six checks, 
 
 | Criterion | Weight (1 to 5) | Why |
 |---|---|---|
-| <criterion> | <weight> | <reason> |
-
-### Scores (commit after the weights)
-
-| Criterion | Weight (1 to 5) | Why |
-|---|---|---|
 | Passes the F2 rows as written | 5 | The rows are the spec, so a builder that misses them costs us review time in Phase 2. |
 | Fits the ADR-001 stack | 4 | ADR-001 puts data in a Worker and D1, and X5 and X6 exclude a hosted backend and a framework. |
 | Stays inside the feature | 3 | Extra features need review and may break exclusions, but they can be deleted. |
@@ -70,10 +64,26 @@ The shared test covers F2-1 and F2-4 only, and both builds pass all six checks, 
 | A teammate can review it in one sitting | 4 | Every change needs a reviewer other than its author, and review time is short. |
 | Avoids live services and credentials | 4 | The repo is public, and TOOLS.md needs a row and a crossing statement for every service. |
 
+### Scores (commit after the weights)
+
+| Criterion | Weight | bolt.new | AI Studio |
+|---|---|---|---|
+| Passes the F2 rows as written | 5 | 5 | 4 |
+| Fits the ADR-001 stack | 4 | 1 | 2 |
+| Stays inside the feature | 3 | 4 | 2 |
+| Reports its data and its own results honestly | 4 | 2 | 1 |
+| A teammate can review it in one sitting | 4 | 2 | 4 |
+| Avoids live services and credentials | 4 | 1 | 5 |
+| **Weighted total** | | 61 | 74 |
+
 
 ### Decision
 
-<Which builder your team should use for this feature in Phase 2, why, and at least one thing that gets harder with that choice. Tie the reasoning to your team's ADR-001 stack.>
+Use AI Studio for F2 in Phase 2, with a prompt that carries X4, X5, and X6. It scored 74 to bolt.new's 61. It leads on the stack, review, and credentials criteria, and trails on passing the rows, staying inside the feature, and honesty.
+
+The result depends on one criterion. Without "Avoids live services and credentials," bolt.new leads 57 to 54. bolt.new created a Supabase database and shipped a .env. AI Studio made no network calls, and its ranking is one function in gapRanking.ts that can move into a Worker endpoint, which fits ADR-001.
+
+What gets harder: AI Studio broke F2-2 and then reported the app as verified, so a reviewer has to check every claim in its output against the EARS rows. It also built three components F2 did not ask for, and we have to delete them. Neither build fits ADR-001 as delivered. Both use React, Vite, TypeScript, and Tailwind, which X6 excludes, so the ranking function gets ported to plain JavaScript in a Worker either way.
 
 ## Handoff to the Team
 
